@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ProdutoItem } from 'src/app/loja-detail/produto-item/produto-item.model';
-import { Produtos } from '../novo-produto/produto.model';
 import { DIMENSIVA_API } from 'src/app/app.api'
 
 @Injectable({

@@ -1,11 +1,18 @@
 export class GerenciarVendas{
     id: string
-    name: string
-    date: Date
+    firstName: string
+    lastName: string
+    email: string
     address: string
-    number: string
-    optionalAddress: string
-    paymentOption: string
-    orderItems: string
-    total: string
+    cep: string
+    pagamento: string
+    total: number
+    compraItems: CompraItem[] = []
+}
+
+class CompraItem {
+  constructor(
+    public quantity: number,
+    public produtoId: string
+    ) {}
 }

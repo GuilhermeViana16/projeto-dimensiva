@@ -13,10 +13,10 @@ export class GerenciarVendasService {
   constructor(private http: HttpClient) { }
 
   listaDeVendas(): Observable<GerenciarVendas[]>{
-    return this.http.get<GerenciarVendas[]>(`${DIMENSIVA_API}/vendas`);
+    return this.http.get<GerenciarVendas[]>(`${DIMENSIVA_API}/compras`);
   }
 
   remover(venda: GerenciarVendas): Observable<GerenciarVendas>{
-    return this.http.delete<GerenciarVendas>(`${DIMENSIVA_API}/vendas/${venda.id}`);
+    return this.http.delete<GerenciarVendas>(`${DIMENSIVA_API}/compras/${venda.id}`);
   }
 }

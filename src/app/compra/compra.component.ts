@@ -7,8 +7,7 @@ import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-compra',
-  templateUrl: './compra.component.html',
-  styleUrls: ['./compra.component.css']
+  templateUrl: './compra.component.html'
 })
 export class CompraComponent implements OnInit {
 

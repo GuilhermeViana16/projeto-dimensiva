@@ -3,8 +3,7 @@ import { CarrinhoCompraService } from './carrinho-compra.service';
 
 @Component({
   selector: 'app-carrinho-compra',
-  templateUrl: './carrinho-compra.component.html',
-  styleUrls: ['./carrinho-compra.component.css']
+  templateUrl: './carrinho-compra.component.html'
 })
 export class CarrinhoCompraComponent implements OnInit {
 

@@ -4,11 +4,6 @@ import { ProdutoItem } from 'src/app/loja-detail/produto-item/produto-item.model
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 import { Produtos } from '../novo-produto/produto.model';
-import { FormControl } from '@angular/forms';
-import { DIMENSIVA_API } from 'src/app/app.api';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { tap, map } from 'rxjs/operators'
 
 @Component({
   selector: 'app-gerenciar-estoque',

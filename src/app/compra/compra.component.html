@@ -18,8 +18,8 @@
 
           <form #form="ngForm" class="needs-validation" novalidate="">
 
-            {{form.valid}}
-            {{form.value | json}}
+            <!-- {{form.valid}}
+            {{form.value | json}} -->
 
             <div class="row">
 
@@ -71,9 +71,9 @@
 
               <label for="pagamento">Pagamento *</label>
               <select class="form-control" name="pagamento" ngModel class="custom-select d-block w-10" id="pais" required>
-                <option value="MON">Dinheiro</option>
-                <option value="CRE">Cartão de Crédito</option>
-                <option value="DEB">Cartão de Débito</option>
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Crédito">Cartão de Crédito</option>
+                <option value="Debito">Cartão de Débito</option>
               </select>
 
             </div>

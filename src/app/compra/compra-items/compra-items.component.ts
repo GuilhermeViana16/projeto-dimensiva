@@ -3,8 +3,7 @@ import { CarrinhoItem } from 'src/app/loja-detail/carrinho-compra/carrinho-compr
 
 @Component({
   selector: 'app-compra-items',
-  templateUrl: './compra-items.component.html',
-  styleUrls: ['./compra-items.component.css']
+  templateUrl: './compra-items.component.html'
 })
 export class CompraItemsComponent implements OnInit {
 

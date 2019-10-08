@@ -34,7 +34,7 @@ import { InputComponent } from './shared/input/input.component';
 import { CompraItemsComponent } from './compra/compra-items/compra-items.component';
 import { CompraService } from './compra/compra.service';
 import { CompraFinalizadaComponent } from './compra-finalizada/compra-finalizada.component';
-import { DeliveryCostsComponent } from './compra/compra-items/delivery-costs/delivery-costs.component'
+import { DeliveryCostsComponent } from './compra/delivery-costs/delivery-costs.component'
 
 @NgModule({
   declarations: [
