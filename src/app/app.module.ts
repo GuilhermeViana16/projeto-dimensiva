@@ -20,6 +20,14 @@ import { MarcaComponent } from './marcas/marca/marca.component';
 import { MarcaDetailComponent } from './marca-detail/marca-detail.component';
 import { CarroComponent } from './marca-detail/carro/carro.component';
 import { CarroItemComponent } from './marca-detail/carro-item/carro-item.component';
+import { CadastroCarroComponent } from './painel-de-controle/cadastro-carro/cadastro-carro.component';
+import { GerenciarCarrosService } from './painel-de-controle/gerenciar-carros/gerenciar-carros.service';
+import { CadastroMarcaComponent } from './painel-de-controle/cadastro-marca/cadastro-marca.component';
+import { GerenciarCarrosComponent } from './painel-de-controle/gerenciar-carros/gerenciar-carros.component';
+import { PainelDeControleComponent } from './painel-de-controle/painel-de-controle.component';
+import { GerenciarMarcasComponent } from './painel-de-controle/gerenciar-marcas/gerenciar-marcas.component';
+import { ProfileMenuComponent } from './painel-de-controle/profile-menu/profile-menu.component';
+import { GerenciarMarcasService } from './painel-de-controle/gerenciar-marcas/gerenciar-marcas.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +40,13 @@ import { CarroItemComponent } from './marca-detail/carro-item/carro-item.compone
     MarcaComponent,
     MarcaDetailComponent,
     CarroComponent,
-    CarroItemComponent
+    CarroItemComponent,
+    PainelDeControleComponent,
+    CadastroCarroComponent,
+    CadastroMarcaComponent,
+    GerenciarCarrosComponent,
+    GerenciarMarcasComponent,
+    ProfileMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +58,7 @@ import { CarroItemComponent } from './marca-detail/carro-item/carro-item.compone
     FormsModule,
     SweetAlert2Module.forRoot()
   ],
-  providers: [MarcasService],
+  providers: [MarcasService, GerenciarCarrosService, GerenciarMarcasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
