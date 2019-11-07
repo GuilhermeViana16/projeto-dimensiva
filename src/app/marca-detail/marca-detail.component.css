@@ -1,0 +1,45 @@
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Montserrat', sans-serif; font-weight:700;
+	text-transform: uppercase;
+	letter-spacing: 2px
+}
+
+.jumbotron {
+	width: 100%;
+	min-height: 250px;
+	background: url('https://s122939.gridserver.com/clients/conversant/images/driving.jpg') center center;
+	background-size: cover;
+	opacity: 1;
+	display: table;
+	width: 100%;
+	position: relative;
+	border-radius: 0px;
+	color: white;
+	text-transform: uppercase;
+	margin: 0;
+	-webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 85%);
+  clip-path: url(#poly);
+	overflow-x: hidden;
+  
+}
+.jumbotron h1 {
+	font-size: 50px;
+}
+.jumbotron h2 {
+	font-size: 18px;
+	margin: 0;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .jumbotron {
+        min-height: 460px;
+        padding: 5px 15px;
+    }
+    .jumbotron h1 {
+        font-size: 30px;
+    }
+    .jumbotron h2 {
+        font-size: 16px;
+    }
+    } /**** END 320 and 480 ****/
+    

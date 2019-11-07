@@ -1,8 +1,0 @@
-<h2 style="border-bottom: 2px solid black">Todos os Produtos</h2>
-
-<app-produto-item 
-    *ngFor="let item of produto | async" 
-        [produtoItem]="item" (add)="carrinhoCompra.addItem($event)">
-</app-produto-item>
-
-<app-carrinho-compra style="display: none" #carrinhoCompra></app-carrinho-compra>

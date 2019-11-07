@@ -1,0 +1,27 @@
+.body {
+	background: url(https://img.olhardigital.com.br/uploads/acervo_imagens/2019/04/r16x9/20190411060923_1200_675_-_besturn_t77_da_xiaomi.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: Lato;
+    color: white;
+    height: 100vh;
+}
+.html {
+	height: 100%;
+}
+#content {
+	text-align: center;
+	padding-top: 25%;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 
+				       0px 8px 13px rgba(0,0,0,0.1),
+				       0px 18px 23px rgba(0,0,0,0.1);
+}
+h1 {
+	font-weight: 700;
+	font-size: 5.0em;
+}
+hr {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2)
+}

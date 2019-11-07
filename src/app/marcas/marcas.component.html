@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<app-slide></app-slide>
+<br>
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+
+      <div *ngFor="let marca of marcas" class="col-md-4">
+        <div class="card card-01 height-fix">
+          <app-marca [marca]="marca"></app-marca>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</section>

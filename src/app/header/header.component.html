@@ -1,31 +1,21 @@
-  <div class="collapse bg-primary" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">Sobre</h4>
-          <p class="text-white">Site voltado para venda de produtos ou a comercialização de serviços em pequenas quantidades, ao contrário do que acontece na venda por atacado.</p>
-          <button class="btn btn-outline-dark" [routerLink]="['/painel-controle']">Painel de Controle</button>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contatos</h4>
-          <ul class="list-unstyled">
-            <li><a href="https://web.whatsapp.com/" class="text-white">Whatsapp: 085986589473</a></li>
-            <li><a href="https://pt-br.facebook.com/" class="text-white">Facebook: SchoolSupplies</a></li>
-            <li><a href="https://www.instagram.com/?hl=pt-br" class="text-white">Instagram: @SchoolSupplies</a></li>
-          </ul>
-        </div>
-      </div>
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" [routerLink]="['/']">BorgesCar2</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/marcas']">Marcas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/sobre']">Sobre</a>
+        </li>
+      </ul>
     </div>
-  </div>
-  <div class="navbar navbar-dark bg-primary shadow-sm">
-    <div class="container d-flex justify-content-between">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <img src="assets/compass.png">
-        <strong [routerLink]="['/']">School Supplies</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
-<br>
+  </nav>
+</header>
