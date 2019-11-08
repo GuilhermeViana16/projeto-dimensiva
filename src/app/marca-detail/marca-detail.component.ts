@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { Marca } from '../marcas/marca/marca.model';
 import { MarcasService } from '../marcas/marcas.service';
 import { ActivatedRoute } from '@angular/router';

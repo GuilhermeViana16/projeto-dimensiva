@@ -30,3 +30,47 @@ hr {
 	background-color: #20638f;
 	border-color: #20638f;
 }
+
+/* max-width  */
+@media screen and (max-width: 600px) {
+	h1 {
+		font-weight: 700;
+		font-size: 3.5em;
+	}
+
+	hr {
+		width: 300px;
+	}
+}
+ 
+/* min-width */
+@media screen and (min-width: 900px) {
+	h1 {
+		font-weight: 700;
+		font-size: 5.0em;
+	}
+}
+ 
+/* min-width & max-width */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	h1 {
+		font-weight: 700;
+		font-size: 3.5em;
+	}
+
+	hr {
+		width: 300px;
+	}
+}
+ 
+/* max device width */
+@media screen and (max-width: 480px) {
+	h1 {
+		font-weight: 700;
+		font-size: 2.0em;
+	}
+
+	hr {
+		width: 250px;
+	}
+}

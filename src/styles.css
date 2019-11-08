@@ -8,6 +8,12 @@
 }
 .card{
   box-shadow:2px 2px 20px rgba(0,0,0,0.3); border:none; margin-bottom:30px;
+  min-height: 450px;
+  max-height: 450px;
+}
+.card img{
+  min-height: 450px;
+  max-height: 450px;
 }
 .card:hover{
   transform: scale(1.05);

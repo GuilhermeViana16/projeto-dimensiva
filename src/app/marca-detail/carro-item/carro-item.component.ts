@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CarroItem } from './carro-item.model';
 
 @Component({
   selector: 'app-carro-item',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carro-item.component.css']
 })
 export class CarroItemComponent implements OnInit {
+
+  @Input() carroItem: CarroItem
 
   constructor() { }
 

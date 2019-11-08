@@ -7,7 +7,7 @@
         "sobre": "FIAT é uma das marcas da Fiat Chrysler Automobiles, um dos maiores fabricantes de automóveis do mundo, com sede mundial na cidade de Turim, norte da Itália.",
         "data": "27/07/2001",
         "autor": "Guilherme",
-        "imagem": "../assets/marcas/fiat.png"
+        "imagem": "../assets/marcas/fiat.jpeg"
     },
     {
         "id": "volkswagen",
@@ -16,7 +16,7 @@
         "sobre": "A Volkswagen é uma fabricante alemã de veículos que pertence ao Grupo Volkswagen. É o segundo maior fabricante de automóveis do mundo e tem a sua sede na cidade de Wolfsburg, na Baixa Saxônia.",
         "data": "27/07/2001",
         "autor": "Guilherme",
-        "imagem": "../assets/marcas/volkswagen.png"
+        "imagem": "../assets/marcas/volkswagen.jpeg"
     },
     {
         "id": "honda",
@@ -25,7 +25,7 @@
         "sobre": "Honda Motor Company, Limited é um dos mais importantes fabricantes de automóveis e motocicletas do mundo. Fundada por Soichiro Honda.",
         "data": "27/07/2001",
         "autor": "Guilherme",
-        "imagem": "../assets/marcas/honda.png"
+        "imagem": "../assets/marcas/honda.jpeg"
     },
     {
         "id": "chevrolet",
@@ -34,7 +34,7 @@
         "sobre": "Chevrolet é um fabricante de veículos motorizados norte-americano fundado em 1911 por Louis Chevrolet e que pertence à General Motors juntamente com Cadillac, Buick, GMC, Holden, Pontiac e antigos proprietários das marcas Opel e Vauxhall, ex-fabricantes da marca na Europa.",
         "data": "27/07/2001",
         "autor": "Guilherme",
-        "imagem": "../assets/marcas/chevrolet.png"
+        "imagem": "../assets/marcas/chevrolet.jpg"
     },
     {
         "id": "renault",
@@ -43,7 +43,7 @@
         "sobre": "A Renault S.A. é uma empresa francesa, responsável pela fabricação de veículos, fundada em 25 de fevereiro de 1899 por Louis Renault. Produz desde automóveis pequenos e médios, vans, ônibus e caminhões.",
         "data": "27/07/2001",
         "autor": "Guilherme",
-        "imagem": "../assets/marcas/renault.jpg"
+        "imagem": "../assets/marcas/renault.jpeg"
     },
     {
         "id": "ford",
@@ -54,5 +54,15 @@
         "autor": "Guilherme",
         "imagem": "../assets/marcas/ford.jpg"
     }
+  ],
+  "carros": [
+      {
+          "id": "1",
+          "marca": "Volkswagen",
+          "nome": "Gol",
+          "imagem": "../assets/carros/volkswagen-gol.jpg",
+          "autor": "Guilherme",
+          "data": "27/07/2001"
+      }
   ]
 }

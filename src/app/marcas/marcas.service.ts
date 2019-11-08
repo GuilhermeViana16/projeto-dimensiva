@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { BORGESCAR2_API } from '../app.api';
 import { Marca } from './marca/marca.model';
+import { CarroItem } from '../marca-detail/carro-item/carro-item.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class MarcasService {
     return this.http.get<Marca>(`${BORGESCAR2_API}/marcas/${id}`)
   }
 
-  // obterCarroDeMarca(id: string): Observable<CarroItem[]>{
-  //   return this.http.get<CarroItem[]>(`${BORGESCAR2_API}/marcas/${id}/carro`)
-  // }
+  obterCarroDeMarca(id: string): Observable<CarroItem[]>{
+    return this.http.get<CarroItem[]>(`${BORGESCAR2_API}/marcas/${id}/carros`)
+  }
 }
