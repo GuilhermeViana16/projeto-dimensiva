@@ -1,3 +1,7 @@
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: yellow;
+    color: #962d22;
+}
+
+.bg-dark {
+    background-color: #20638f !important;
 }

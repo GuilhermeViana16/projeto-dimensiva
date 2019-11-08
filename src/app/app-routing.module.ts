@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MarcasComponent } from './marcas/marcas.component';
 import { MarcaDetailComponent } from './marca-detail/marca-detail.component';
-import { PainelDeControleComponent } from './painel-de-controle/painel-de-controle.component';
 import { GerenciarMarcasComponent } from './painel-de-controle/gerenciar-marcas/gerenciar-marcas.component';
 import { GerenciarCarrosComponent } from './painel-de-controle/gerenciar-carros/gerenciar-carros.component';
 import { CadastroCarroComponent } from './painel-de-controle/cadastro-carro/cadastro-carro.component';
@@ -14,7 +13,6 @@ export const routes: Routes = [
   {path: 'marcas', component: MarcasComponent},
   {path: 'marcas/:id', component: MarcaDetailComponent},
 
-  {path: 'painel-controle', component: PainelDeControleComponent},
   {path: 'gerenciar-marcas', component: GerenciarMarcasComponent},
   {path: 'gerenciar-carros', component: GerenciarCarrosComponent},
   {path: 'cadastrar-carro', component: CadastroCarroComponent},
