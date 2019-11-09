@@ -8,16 +8,6 @@
                 <div class="dashborad-box">
                     <h4 class="title">Tabela dos Carros <a [routerLink]="['/cadastrar-carro']" class="btn-floating btn-sm btn-success"><i class="fas fa-plus"></i></a></h4>
                     <div class="section-body">
-                        <div class="dropdown mr-1">
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                                <!-- A créer dans le back SELECT * FROM statuts -->
-                                <a class="dropdown-item" href="#">Brouillon</a>
-                                <a class="dropdown-item" href="#">Proposé</a>
-                                <a class="dropdown-item" href="#">Annulé</a>
-                                <a class="dropdown-item" href="#">Refusé</a>
-                                <a class="dropdown-item" href="#">Financé</a>
-                            </div>
-                        </div>
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
@@ -27,32 +17,15 @@
                                     <th>Data do post</th>
                                     <th>Ação</th>
                                 </thead>
-                                <tbody>
+                                <tbody *ngFor="let carro of carros">
                                     <tr>
-                                        <td>Fusca</td>
-                                        <!-- <td><span class="badge badge-pill badge-info">observação</span></td> -->
-                                        <td><span class="badge badge-pill badge-success">Volkswagen</span></td>
+                                        <td>{{carro.nome}}</td>
                                         <td>
-                                            <span class="g-auteur">Guilherme</span>
-                                            <!-- <br />
-                                            <span><em><a class="g-lien" href="#">Greenpeace</a></em></span> -->
-                                        </td>
-                                        <td>27 agosto 2019</td>
+                                            <span class="badge badge-pill badge-success">{{carro.marca}}</span></td>
                                         <td>
-                                            <a href=""><span class="g-action fa fa-pen-alt"> </span></a>
-                                            <a href=""><span class="g-action fa fa-eye"></span></a>
-                                            <a href=""><span class="g-action fa fa-trash"></span></a>
+                                            <span class="g-auteur">{{carro.autor}}</span>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Volkswagen</td>
-                                        <td><span class="badge badge-pill badge-success">ativo</span></td>
-                                        <td>
-                                            <span class="g-auteur">Guilherme</span>
-                                            <!-- <br />
-                                            <span><em><a class="g-lien" href="#">Greenpeace</a></em></span> -->
-                                        </td>
-                                        <td>16 novembro 2019</td>
+                                        <td>{{carro.data}}</td>
                                         <td>
                                             <a href=""><span class="g-action fa fa-pen-alt"> </span></a>
                                             <a href=""><span class="g-action fa fa-eye"></span></a>

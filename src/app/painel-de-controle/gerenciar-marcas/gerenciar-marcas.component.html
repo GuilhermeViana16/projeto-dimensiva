@@ -9,16 +9,6 @@
                     <h4 class="title">Tabela das marcas <a [routerLink]="['/cadastrar-marca']" class="btn-floating btn-sm btn-success"><i class="fas fa-plus"></i></a></h4>
                     
                     <div class="section-body">
-                        <div class="dropdown mr-1">
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                                <!-- A créer dans le back SELECT * FROM statuts -->
-                                <a class="dropdown-item" href="#">Brouillon</a>
-                                <a class="dropdown-item" href="#">Proposé</a>
-                                <a class="dropdown-item" href="#">Annulé</a>
-                                <a class="dropdown-item" href="#">Refusé</a>
-                                <a class="dropdown-item" href="#">Financé</a>
-                            </div>
-                        </div>
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
@@ -32,8 +22,6 @@
                                         <td>{{marca.nome}}</td>
                                         <td>
                                             <span class="g-auteur">{{marca.autor}}</span>
-                                            <!-- <br />
-                                            <span><em><a class="g-lien" href="#">Greenpeace</a></em></span> -->
                                         </td>
                                         <td>{{marca.data}}</td>
                                         <td>

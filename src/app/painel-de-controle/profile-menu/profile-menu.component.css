@@ -22,7 +22,7 @@ html {
   ul li, ol li {
     list-style: none;
   }
-  
+
   /*COULEURS===========================*/
   
   .g-blue {
@@ -83,19 +83,12 @@ html {
     background-repeat: no-repeat;
     border: none;
     margin-bottom: 50px;
-    /* background: rgba(0, 0, 0, 0.04) url(../img/extra/corn-field-440338_640_200.jpg) top left repeat; */
     background: rgba(0, 0, 0, 0.04) url(https://cache.desktopnexus.com/thumbseg/2054/2054522-bigthumbnail.jpg) top left repeat;
     
     color: #ffffff;
     max-height: 100px;
    }
-  
-  /*.user-profile-box .header h2 {
-    text-shadow: 0px 0px 2px #AAAA;
-    margin: 0 0 8px;
-    color: #fff;
-    font-size: 24px;
-  }*/
+
   
   .user-profile-box .profile-img {
     background-clip: padding-box;
@@ -347,37 +340,7 @@ html {
     margin-bottom: 10px;
     color: #0dcdbd;
   }
-  
-  /*.user-profile-box {
-    background: #ffffff;
-    box-shadow: 0 0 20px rgba(38, 38, 38, 0.2);
-    margin: 0 auto 50px;
-  }
-  
-  .user-profile-box .header {
-    padding: 30px 20px 120px;
-    text-align: center;
-    position: relative;
-    background-repeat: no-repeat;
-    border: none;
-    margin: 0;
-    background: rgba(0, 0, 0, 0.04) url(../img/avatar/user-bg.jpg) top left repeat;
-    background-size: cover;
-    color: #ffffff;
-  }
-  
-  .user-profile-box .header h2 {
-    margin: 0 0 8px;
-    color: #fff;
-    font-size: 24px;
-  }
-  
-  .user-profile-box .header h4 {
-    font-size: 16px;
-    color: #fff;
-    font-weight: 400;
-  }
-  */
+
   .user-profile-box .profile-img {
     border-radius: 4px;
     background-clip: padding-box;
@@ -426,128 +389,6 @@ html {
     padding: 30px;
   }
   
-  /*.my-properties {
-    background: #FFFFFF;
-    box-shadow: 0 0 20px rgba(38, 38, 38, 0.2);
-    padding: 30px;
-  }
-  
-  .my-properties table {
-    width: 100%;
-    display: table;
-  }
-  
-  .my-properties table thead tr th {
-    font-size: 16px;
-    background-color: #f3f3f3;
-    border: none;
-    font-weight: 700;
-    padding: 10px 10px 10px 0;
-  }
-  
-  .my-properties table thead tr th:first-child {
-    padding-left: 30px;
-  }
-  
-  .my-properties table tbody tr td {
-    border-top: none;
-    border-bottom: 1px solid #f3f3f3;
-    padding: 30px 20px 30px 0;
-    vertical-align: middle;
-    font-size: 14px;
-  }
-  
-  .my-properties table h2 {
-    border: none;
-    font-size: 16px;
-    font-weight: 500;
-    margin: 0 0 7px 0;
-    padding: 0;
-  }
-  
-  .my-properties table tbody tr .image {
-    width: 150px;
-  }
-  
-  .my-properties table tbody tr .image a img {
-    width: 100%;
-  }
-  
-  .my-properties table tbody tr td .actions .edit {
-    float: left;
-  }
-  
-  .my-properties table tbody tr td .inner figure {
-    margin-bottom: 5px;
-  }
-  
-  .my-properties table tbody tr td .inner figure i {
-    font-size: 13px;
-  }
-  
-  .my-properties table tbody tr td .price {
-    font-size: 12px;
-    font-weight: 500;
-  }
-  
-  .my-properties table tbody tr td.actions {
-    text-align: right;
-  }
-  
-  .my-properties table tbody tr td.actions .edit {
-    float: left;
-    color: #0dcdbd;
-  }
-  
-  .my-properties table tbody tr td.actions .edit i {
-    -moz-transition: 0.4s;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    margin-right: 5px;
-  }
-  
-  .my-properties table tbody tr td.actions a {
-    padding: 0;
-    color: #f50057;
-  }
-  
-  .my-properties table tbody tr td:last-child {
-    padding-right: 5px;
-  }
-  
-  .user-page .heading {
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 22px;
-  }
-  
-  .notification-box {
-    padding: 30px 35px;
-    color: #727272;
-    border-radius: 4px;
-    background-color: #f3f3f3;
-  }
-  
-  .notification-box h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-  
-  .notification-box p {
-    margin-bottom: 0;
-  }
-  
-  .submit-property .drop-file {
-    position: relative;
-    border: 2px dashed #e5e5e5;
-    border-radius: 4px;
-    background: #fcfcfc;
-    transition: all 0.3s linear;
-    display: inline-block;
-    width: 100%;
-  }*/
-  
   select {
     border: 0;
     font-size: 14px;
@@ -575,54 +416,6 @@ html {
   select:focus {
     outline: none;
     box-shadow: none;
-  }
-  
-  /*.form-check-input {
-    margin-top: 7px;
-  }
-  
-  .drop-file {
-    position: relative;
-    border: 2px dashed #d0d0d0;
-    border-radius: 4px;
-    background: #fcfcfc;
-    transition: all 0.3s linear;
-    display: inline-block;
-    width: 100%;
-  }
-  
-  .drop-file:before {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    content: "";
-    top: 0;
-    left: 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
-    background-color: #66676b;
-    opacity: 0;
-    z-index: 10;
-    transition: all 0.3s linear;
-    border-radius: 4px;
-  }
-  
-  .drop-file .drop-message {
-    text-align: center;
-    margin: 50px 0;
-    font-size: 17px;
-    color: #4a4747;
-    transition: all 0.3s linear;
-    position: relative;
-    z-index: 11;
-  }
-  
-  .drop-file .drop-message:hover {
-    color: #66676b;
-  }
-  
-  .drop-file .drop-message span {
-    display: inline;
-    line-height: 117px;
   }
   
   /* Portfolios Section */
@@ -748,4 +541,8 @@ html {
     color: white!important;
     background-color: transparent;
     border-color: #ccc;
+  }
+
+  .user-profile-box[_ngcontent-c2] .detail[_ngcontent-c2] {
+    padding-top: 20px;
   }

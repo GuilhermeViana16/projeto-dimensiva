@@ -13,20 +13,85 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+/* Preloader */
+
+
+.load__none {
+  display: none;  
+  color:#fff;
+}
+
+.load__animation{
+  border: 5px solid #272727;
+  border-top-color: #e50914;
+  border-top-style: groove;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-animation: turn 1.5s linear infinite;
+  -o-animation: turn 1.5s linear infinite;
+  animation: turn 1.5s linear infinite;
+}
+
+.load {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  z-index: 999;
+  background: url(./assets/loading.jpg) center;
+}
+
+.load__container {
+  position: relative;
+}
+
+@keyframes turn {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg)}
+} 
+
+.load__title {
+  color: #fff;
+  font-size: 2rem;
+}
+
+
+@keyframes loadPage {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}</style>
 
 </head>
 <body>
 
   <app-root>
 
-      <div class="wrap">
-          <div class="bg">
-            <div class="loading">
-              <span class="title">loading</span>
-              <span class="text">tehran highway</span>
-            </div>
-          </div>
-        </div>
+<!-- Preloader -->
+<div id="Load" class="load">
+    <div class="load__container">
+      <div class="load__animation"></div>
+      <div class="load__mask"></div>
+      <span class="load__title">Carregando...</span>
+    </div>
+  </div>
 
   </app-root>
 

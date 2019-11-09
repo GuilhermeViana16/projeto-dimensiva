@@ -172,25 +172,7 @@ figure.snip1249.hover:after {
 
 
 
-
-/* CARROSEL */
-
-
-.d-block {
-  border-radius: 10px;
-}
-
-
-
-
-
 /* MODAL ACCORDION */
-
-
-
-
-
-
 body {
   margin: 0;
   font-family: 'Roboto';
@@ -252,7 +234,7 @@ a:active {
 }
 
 .panel-heading {
-  background-color: #009688;
+  background-color: #20638f;
   border-radius: 0;
   border: none;
   color: #fff;
@@ -336,4 +318,82 @@ a:active {
 #accordion .panel-heading.active a:before {
   transform: rotate(0deg);
   transition: all 0.5s;
+}
+
+/* 
+
+--------------------------------------------------------------
+MODAL
+--------------------------------------------------------------
+
+*/
+
+.text-uppercase {
+  text-transform:uppercase;
+}
+
+.titulos {
+  font-family: 'Cabin Condensed', sans-serif;
+  font-weight:bold;
+  font-size: 2.0em;
+  color: #333 !important;
+}
+
+.i {
+  font-style: italic !important;
+}
+
+.slide_interior p, .slide_exterior p{
+  background: #20638f;
+  color: white;
+  display: block;
+  margin: 10px auto 0 auto;
+  padding: 12px 15px;
+  font-weight: bold;
+  outline: none !important;
+  -webkit-transform: skew(-12deg);
+  -moz-transform: skew(-12deg);
+  -o-transform: skew(-12deg);
+  transform: skew(-12deg);
+}
+
+.seguranca h1, .informacoes h1, .performance .direita h2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.seguranca p {
+  margin-left: 20px;
+  font-family: 'Cabin Condensed', sans-serif;
+  color: #333;
+  font-size: 1.0em;
+  font-weight:bold;
+}
+
+.fa-check {
+  color: #059e2b;
+}
+
+.performance .text-center h2{
+  font-size: 100px;
+  color: #20638f;
+  line-height: .8;
+  font-weight: 700;
+}
+
+.performance .text-center p{
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 700;
+  color: #333;
+  font-weight:bold;
+}
+
+.performance .sobre p{
+  font-family: 'Cabin Condensed', sans-serif;
+  color: #333;
+  font-size: 1.0em;
+  font-weight:bold;
+  margin: 10px 10px 10px 25px;
+  text-align: justify;
 }
