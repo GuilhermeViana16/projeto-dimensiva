@@ -21,6 +21,6 @@ export class MarcasService {
   }
 
   obterCarroDeMarca(id: string): Observable<CarroItem[]>{
-    return this.http.get<CarroItem[]>(`${BORGESCAR2_API}/marcas/${id}/carros`)
+    return this.http.get<CarroItem[]>(`${BORGESCAR2_API}/marcas/${id}/carro`)
   }
 }

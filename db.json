@@ -1,7 +1,7 @@
 {
   "marcas": [
     {
-        "id": "fiat",
+        "id": "Fiat",
         "nome": "Fiat",
         "detalhe": "FIAT é uma das marcas da Fiat Chrysler Automobiles",
         "sobre": "FIAT é uma das marcas da Fiat Chrysler Automobiles, um dos maiores fabricantes de automóveis do mundo, com sede mundial na cidade de Turim, norte da Itália.",
@@ -10,7 +10,7 @@
         "imagem": "../assets/marcas/fiat.jpeg"
     },
     {
-        "id": "volkswagen",
+        "id": "Volkswagen",
         "nome": "Volkswagen",
         "detalhe": "A Volkswagen é uma fabricante alemã de veículos",
         "sobre": "A Volkswagen é uma fabricante alemã de veículos que pertence ao Grupo Volkswagen. É o segundo maior fabricante de automóveis do mundo e tem a sua sede na cidade de Wolfsburg, na Baixa Saxônia.",
@@ -19,7 +19,7 @@
         "imagem": "../assets/marcas/volkswagen.jpeg"
     },
     {
-        "id": "honda",
+        "id": "Honda",
         "nome": "Honda",
         "detalhe": "Honda Motor Company, Limited é um dos mais importantes",
         "sobre": "Honda Motor Company, Limited é um dos mais importantes fabricantes de automóveis e motocicletas do mundo. Fundada por Soichiro Honda.",
@@ -28,7 +28,7 @@
         "imagem": "../assets/marcas/honda.jpeg"
     },
     {
-        "id": "chevrolet",
+        "id": "Chevrolet",
         "nome": "Chevrolet",
         "detalhe": "Chevrolet é um fabricante de veículos motorizados",
         "sobre": "Chevrolet é um fabricante de veículos motorizados norte-americano fundado em 1911 por Louis Chevrolet e que pertence à General Motors juntamente com Cadillac, Buick, GMC, Holden, Pontiac e antigos proprietários das marcas Opel e Vauxhall, ex-fabricantes da marca na Europa.",
@@ -37,7 +37,7 @@
         "imagem": "../assets/marcas/chevrolet.jpg"
     },
     {
-        "id": "renault",
+        "id": "Renault",
         "nome": "Renault",
         "detalhe": "A Renault S.A. é uma empresa francesa, responsável pela fabricação de veículos",
         "sobre": "A Renault S.A. é uma empresa francesa, responsável pela fabricação de veículos, fundada em 25 de fevereiro de 1899 por Louis Renault. Produz desde automóveis pequenos e médios, vans, ônibus e caminhões.",
@@ -46,7 +46,7 @@
         "imagem": "../assets/marcas/renault.jpeg"
     },
     {
-        "id": "ford",
+        "id": "Ford",
         "nome": "Ford",
         "detalhe": "Ford Motor Company é uma fabricante de automóveis multinacional",
         "sobre": "Ford Motor Company é uma fabricante de automóveis multinacional estadunidense sediada em Dearborn, Michigan, um subúrbio de Detroit. Foi fundada por Henry Ford e incorporada em 16 de junho de 1903.",
@@ -55,12 +55,14 @@
         "imagem": "../assets/marcas/ford.jpg"
     }
   ],
-  "carros": [
+  "carro": [
       {
           "id": "1",
-          "marca": "Volkswagen",
+          "marcaId": "Volkswagen",
           "nome": "Gol",
+          "detalhe": "Motor 1.6 Automático 6 marchas",
           "imagem": "../assets/carros/volkswagen-gol.jpg",
+          "link": "https://cms.carrera.com.br/public/Carrera_VW/gol__gol_1.6_msi_0km_eb3.jpg",
           "autor": "Guilherme",
           "data": "27/07/2001"
       }

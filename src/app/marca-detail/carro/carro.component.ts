@@ -24,5 +24,4 @@ export class CarroComponent implements OnInit {
     this.carro = this.marcasService
     .obterCarroDeMarca(this.route.snapshot.params['id'])
   }
-
 }

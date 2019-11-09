@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 import { CarroItem } from './carro-item.model';
+import { Marca } from 'src/app/marcas/marca/marca.model';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-carro-item',
@@ -8,11 +10,23 @@ import { CarroItem } from './carro-item.model';
 })
 export class CarroItemComponent implements OnInit {
 
+  carros: CarroItem[] =[];
+  carro: CarroItem;
+  bsmodal: BsModalRef;
   @Input() carroItem: CarroItem
 
-  constructor() { }
+  constructor(private modalService: BsModalService) { }
 
   ngOnInit() {
+  }
+
+  visualizar(carro: CarroItem, template: TemplateRef<any>){
+    this.carro = carro;
+    this.bsmodal = this.modalService.show(template);
+  }
+
+  fecharModal(){
+    this.bsmodal.hide();
   }
 
 }
