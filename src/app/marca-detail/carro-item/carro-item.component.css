@@ -248,6 +248,7 @@ a:active {
   position: relative;
   font-size: 16px;
   font-weight: 400;
+  font-family: initial;
 }
 
 .panel-body {
@@ -320,6 +321,10 @@ a:active {
   transition: all 0.5s;
 }
 
+.panel-group .panel .panel-collapse .panel-body .conteudo {
+  font-family: initial;
+}
+
 /* 
 
 --------------------------------------------------------------
@@ -333,7 +338,7 @@ MODAL
 }
 
 .titulos {
-  font-family: 'Cabin Condensed', sans-serif;
+  font-family: fantasy;
   font-weight:bold;
   font-size: 2.0em;
   color: #333 !important;
@@ -364,7 +369,7 @@ MODAL
 
 .seguranca p {
   margin-left: 20px;
-  font-family: 'Cabin Condensed', sans-serif;
+  font-family: none;
   color: #333;
   font-size: 1.0em;
   font-weight:bold;
@@ -387,10 +392,12 @@ MODAL
   font-weight: 700;
   color: #333;
   font-weight:bold;
+  font-family: fantasy;
+  margin-top: 3px;
 }
 
 .performance .sobre p{
-  font-family: 'Cabin Condensed', sans-serif;
+  font-family: initial;
   color: #333;
   font-size: 1.0em;
   font-weight:bold;

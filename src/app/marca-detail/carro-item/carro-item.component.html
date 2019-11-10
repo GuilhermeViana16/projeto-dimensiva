@@ -3,13 +3,13 @@
 <div class="card mb-4 shadow-sm">
   <figure class="snip1249">
     <div class="image">
-      <img [src]="carroItem.imagem" alt="sample90"/><a href="{{carroItem.link}}"><i class="ion-ios-eye-outline"></i></a>
+      <img [src]="carroItem.imagem" alt="sample90"/><a href="{{carroItem.link}}"><i style="font-family: fantasy; color: white;" class="ion-ios-eye-outline"></i></a>
     </div>
     <figcaption>
-      <h3>{{carroItem.nome}}</h3>
-      <p>{{carroItem.detalhe}}</p>
-      <div class="price">
-        {{carroItem.data}}<s>{{carroItem.autor}}</s>
+      <h3 style="font-family: fantasy; color: #333">{{carroItem.nome}}</h3>
+      <p style="font-family: initial;">{{carroItem.detalhe}}</p>
+      <div class="price" style="margin-right: -15px; margin-bottom: -5px; color: white">
+        <s>{{carroItem.autor}}</s>{{carroItem.data}}
       </div>
       <a href="" (click)="visualizar(carro, modalCarro)" class="add-to-cart" data-toggle="modal" data-target="#myModal">Visualizar</a>
     </figcaption>
@@ -129,8 +129,8 @@
           <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
               <div class="row">
-                <div class="col-3">Tipo</div>
-                <div class="col-9 float-left">{{carroItem.direcao}}</div>                 
+                <div class="conteudo col-3">Tipo</div>
+                <div class="conteudo col-9 float-left">{{carroItem.direcao}}</div>                 
               </div>
             </div>
           </div>
@@ -148,8 +148,8 @@
           <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
             <div class="panel-body">
               <div class="row">
-                <div class="col-3">Sistema</div>
-                <div class="col-9 float-left">{{carroItem.freios}}</div>                 
+                <div class="conteudo col-3">Sistema</div>
+                <div class="conteudo col-9 float-left">{{carroItem.freios}}</div>                 
               </div>
             </div>
           </div>
@@ -167,8 +167,8 @@
           <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
             <div class="panel-body">
               <div class="row">
-                <div class="col-3">Tipo</div>
-                <div class="col-9 float-left">{{carroItem.transmissao}}</div>                 
+                <div class="conteudo col-3">Tipo</div>
+                <div class="conteudo col-9 float-left">{{carroItem.transmissao}}</div>                 
               </div>
             </div>
           </div>
@@ -186,8 +186,8 @@
           <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
             <div class="panel-body">
               <div class="row">
-                <div class="col-3">Tipo</div>
-                <div class="col-9 float-left">{{carroItem.motorizacao}}</div>                 
+                <div class="conteudo col-3">Tipo</div>
+                <div class="conteudo col-9 float-left">{{carroItem.motorizacao}}</div>                 
               </div>
             </div>
           </div>
