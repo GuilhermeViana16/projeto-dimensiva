@@ -26,7 +26,6 @@
                                         <td>{{marca.data}}</td>
                                         <td>
                                             <a (click)="onEdit(marca, modalMarca)"><span style="color: dodgerblue; cursor: pointer;" class="g-action fa fa-pencil"></span></a>
-                                            <a ><span style="color: dodgerblue; cursor: pointer;" class="g-action fa fa-eye"></span></a>
                                             <a data-toggle="modal" data-target="#myModal" (click)="remover(marca)"><span style="color: dodgerblue; cursor: pointer;" class="g-action fa fa-trash"></span></a>
                                         </td>
                                     </tr>
@@ -70,7 +69,9 @@
         <option value="Guilherme">Guilherme</option>
       </select>          
       </div>
-
+      <div class="form-group">
+        <input type="date" class="form-control" [(ngModel)]="marca.data" id="data">
+      </div>
     </div>
   
     <!-- Modal footer -->

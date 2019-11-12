@@ -15,7 +15,7 @@
                                     <th>Marca</th>
                                     <th>Postado por</th>
                                     <th>Data do post</th>
-                                    <th>Ação</th>
+                                    <th>Ação</th> 
                                 </thead>
                                 <tbody *ngFor="let carro of carros">
                                     <tr>
@@ -27,9 +27,8 @@
                                         </td>
                                         <td>{{carro.data}}</td>
                                         <td>
-                                            <a href=""><span class="g-action fa fa-pen-alt"> </span></a>
-                                            <a href=""><span class="g-action fa fa-eye"></span></a>
-                                            <a href=""><span class="g-action fa fa-trash"></span></a>
+                                            <a (click)="onEdit(carro, modalCarro)"><span style="color: dodgerblue; cursor: pointer;" class="g-action fa fa-pencil"> </span></a>
+                                            <a data-toggle="modal" data-target="#myModal" (click)="remover(carro)"><span style="color: dodgerblue; cursor: pointer;" class="g-action fa fa-trash"></span></a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -41,3 +40,112 @@
         </div>
     </div>
 </section>
+
+
+<ng-template #modalCarro>
+
+
+<div class="modal-header">
+    <h4 class="modal-title">Atualizar Carro</h4>
+    <button type="button" (click)="fecharModal()" class="close" data-dismiss="modal">&times;</button>
+</div>
+
+<!-- Modal body -->
+<div class="modal-body">
+
+    <div class="form-group mb-3">
+        <label for="nome">Nome</label>
+        <input [(ngModel)]="carro.nome" type="text" class="form-control" id="nome">
+    </div>
+    <div class="form-group mb-3">
+        <label for="detalhe">Marca</label>
+        <input [(ngModel)]="carro.marca" type="text" class="form-control" id="detalhe" >
+    </div>
+    <b>LISTA DE SEGURANÇAS:</b>
+    <div class="form-group mb-3">
+        <label for="seguranca1">Segurança 1</label>
+        <input [(ngModel)]="carro.seguranca1" type="text" class="form-control" id="seguranca1" >
+    </div>
+    <div class="form-group mb-3">
+        <label for="seguranca2">Segurança 2</label>
+        <input [(ngModel)]="carro.seguranca2" type="text" class="form-control" id="seguranca2" >
+    </div>
+    <div class="form-group mb-3">
+        <label for="seguranca3">Segurança 3</label>
+        <input [(ngModel)]="carro.seguranca3" type="text" class="form-control" id="seguranca3" >
+    </div>
+    <div class="form-group mb-3">
+        <label for="cavalos">Cavalos</label>
+        <input [(ngModel)]="carro.cavalos" type="text" class="form-control" id="cavalos" >
+    </div>
+    <div class="form-group mb-3">
+        <label for="performance">Performance</label>
+        <textarea [(ngModel)]="carro.performance" class="form-control" id="performance">
+    </textarea>
+    </div>
+    <div class="form-group mb-3">
+        <label for="cavalos">Cavalos</label>
+        <input [(ngModel)]="carro.cavalos" type="text" class="form-control" id="cavalos" >
+    </div>
+    <div class="form-group mb-3">
+        <label for="direcao">Direção</label>
+        <input [(ngModel)]="carro.direcao" type="text" class="form-control" id="direcao" >
+    </div>
+    <div class="form-group mb-3">
+        <label for="freios">Freios</label>
+        <input [(ngModel)]="carro.freios" type="text" class="form-control" id="freios" >
+    </div>
+    <div class="form-group mb-3">
+        <label for="transmissao">Transmissão</label>
+        <input [(ngModel)]="carro.transmissao" type="text" class="form-control" id="transmissao" >
+    </div>
+    <div class="form-group mb-3">
+        <label for="motorizacao">Motorização</label>
+        <input [(ngModel)]="carro.motorizacao" type="text" class="form-control" id="motorizacao" >
+    </div>
+    <div class="form-group mb-3">
+        <select class="custom-select">
+            <option selected>Autor</option>
+            <option value="Guilherme">Guilherme</option>
+        </select>          
+    </div>
+    <div class="form-group">
+        <input type="date" class="form-control" [(ngModel)]="carro.data" id="data">
+    </div>
+    <div class="form-group mb-3">
+        <label for="link">Link da imagem de apresentação</label>
+        <input [(ngModel)]="carro.link" type="text" class="form-control" id="link" >
+    </div>
+    
+</div>
+<!-- "direcao": "Elétrica Progressiva",
+"freios": "Hidráulico com duplo circuito distribuido em diagonal",
+"transmissao": "Manual de 6 velocidades",
+"motorizacao": "Dianteiro transversal, Gasolina e Etanol",
+"autor": "Guilherme",
+"data": "27/07/2001",
+"link": "https://www.codisman.com.br/assets/uploads/nt_veiculos_seguranca/58758-Seguran--a.png?v=0.1", -->
+
+<!-- Modal footer -->
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-success" data-dismiss="modal" (click)="atualizar()">Atualizar</button>
+    <button type="button" class="btn btn-outline-danger" data-dismiss="modal" (click)="fecharModal()">Cancelar</button>
+</div>
+
+</ng-template>
+
+<swal
+#upgradeSwal
+title="Sucesso"
+text="Marca atualizada com sucesso!"
+type="success"
+(confirm)="fecharModal()">
+</swal>
+
+<swal
+#deleteSwal2
+title="Sucesso"
+text="Marca removida com sucesso!"
+type="success"
+(confirm)="listar()">
+</swal>

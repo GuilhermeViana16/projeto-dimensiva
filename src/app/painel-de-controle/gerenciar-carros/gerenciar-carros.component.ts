@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { CarroItem } from 'src/app/marca-detail/carro-item/carro-item.model';
 import { GerenciarCarrosService } from './gerenciar-carros.service';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap';
+import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 
 @Component({
   selector: 'app-gerenciar-carros',
@@ -8,11 +10,15 @@ import { GerenciarCarrosService } from './gerenciar-carros.service';
   styleUrls: ['./gerenciar-carros.component.css']
 })
 export class GerenciarCarrosComponent implements OnInit {
-
+  
   carros: CarroItem[] =[];
   carro: CarroItem;
+  bsmodal: BsModalRef;
+  @ViewChild('upgradeSwal') alert: SwalComponent;
+  @ViewChild('deleteSwal2') alert2: SwalComponent;
 
-  constructor(private data: GerenciarCarrosService) { }
+  constructor(private data: GerenciarCarrosService,
+              private modalService: BsModalService) { }
 
   ngOnInit() {
     this.listar();
@@ -24,4 +30,32 @@ export class GerenciarCarrosComponent implements OnInit {
       console.log(this.carros);
     })
   }
+
+  onEdit(carro: CarroItem, template: TemplateRef<any>){
+    this.carro = carro;
+    this.bsmodal = this.modalService.show(template);
+  }
+
+  atualizar(){
+    console.log(this.carro)
+    this.data
+      .atualizar(this.carro)
+      .subscribe(res => this.carros.push(res));
+      this.alert.show()
+  }
+
+  remover(carro: CarroItem){
+    this.carro = carro;
+    this.data
+      .remover(this.carro)
+      .subscribe(res => this.carros.push(res));
+      this.listar()
+      this.alert2.show()
+  }
+
+  fecharModal(){
+    this.bsmodal.hide();
+    this.listar()
+  }
+
 }

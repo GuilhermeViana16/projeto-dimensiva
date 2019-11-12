@@ -54,11 +54,9 @@ export class GerenciarMarcasComponent implements OnInit {
       this.alert2.show()
   }
 
-
   fecharModal(){
     this.bsmodal.hide();
     this.listar()
   }
-
 
 }
