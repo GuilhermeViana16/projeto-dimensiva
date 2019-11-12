@@ -1,7 +1,7 @@
 export interface CarroItem {
     id: string
     nome: string
-    imagem: string
+    file: string
     marca: string
     autor: string
     data: Date

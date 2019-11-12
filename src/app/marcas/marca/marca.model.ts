@@ -5,5 +5,5 @@ export interface Marca{
     sobre: string  
     data: string
     autor: string
-    imagem: string
+    file: string
 }
