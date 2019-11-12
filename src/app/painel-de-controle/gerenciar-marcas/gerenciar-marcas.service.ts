@@ -15,4 +15,12 @@ export class GerenciarMarcasService {
   listaDeMarcas(): Observable<Marca[]>{
     return this.http.get<Marca[]>(`${BORGESCAR2_API}/marcas`);
   }
+
+  atualizar(marca: Marca): Observable<Marca>{
+    return this.http.put<Marca>(`${BORGESCAR2_API}/marcas/${marca.id}`, marca);
+  }
+
+  remover(marca: Marca): Observable<Marca>{
+    return this.http.delete<Marca>(`${BORGESCAR2_API}/marcas/${marca.id}`);
+  }
 }
