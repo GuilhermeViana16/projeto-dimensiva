@@ -1,17 +1,17 @@
-<div class="card mb-4 shadow-sm">
-  <figure class="snip1249">
-    <div class="image">
-      <img [src]="carroItem.imagem" alt="sample90"/><a href="{{carroItem.link}}"><i style="font-family: fantasy; color: white;" class="ion-ios-eye-outline"></i></a>
-    </div>
-    <figcaption>
-      <h3 style="font-family: fantasy; color: #333">{{carroItem.nome}}</h3>
-      <p style="font-family: initial;">{{carroItem.detalhe}}</p>
-      <div class="price" style="margin-right: -15px; margin-bottom: -5px; color: white">
-        <s>{{carroItem.autor}}</s>{{carroItem.data}}
+<div id="card-container" data-offset="2">
+  <div class="pg">
+    <a href="{{carroItem.link}}">
+      <img style="margin-top: 75px; margin-left: -10px;" width="350" height="350" [src]="carroItem.imagem">
+    </a>
+  </div>
+  <div id="card">
+      <div class="shine"></div>
+      <div class="text-block">
+        <h1>{{carroItem.nome}}<small>({{carroItem.cavalos}} cavalos)</small></h1>
+        <p>{{carroItem.performance}}</p>
+        <button (click)="visualizar(carro, modalCarro)">Continue lendo...</button>
       </div>
-      <a href="" (click)="visualizar(carro, modalCarro)" class="add-to-cart" data-toggle="modal" data-target="#myModal">Visualizar</a>
-    </figcaption>
-  </figure>
+  </div>
 </div>
 
 <!-- MODAL PARA MOSTRAR INFORMAÇÕES DO CARRO -->

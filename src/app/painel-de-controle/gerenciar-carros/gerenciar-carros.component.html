@@ -12,7 +12,6 @@
                             <table class="table table-striped">
                                 <thead>
                                     <th>Nome</th>
-                                    <th>Marca</th>
                                     <th>Postado por</th>
                                     <th>Data do post</th>
                                     <th>Ação</th> 
@@ -20,8 +19,6 @@
                                 <tbody *ngFor="let carro of carros">
                                     <tr>
                                         <td>{{carro.nome}}</td>
-                                        <td>
-                                            <span class="badge badge-pill badge-success">{{carro.marca}}</span></td>
                                         <td>
                                             <span class="g-auteur">{{carro.autor}}</span>
                                         </td>
@@ -57,10 +54,6 @@
         <label for="nome">Nome</label>
         <input [(ngModel)]="carro.nome" type="text" class="form-control" id="nome">
     </div>
-    <div class="form-group mb-3">
-        <label for="detalhe">Marca</label>
-        <input [(ngModel)]="carro.marca" type="text" class="form-control" id="detalhe" >
-    </div>
     <b>LISTA DE SEGURANÇAS:</b>
     <div class="form-group mb-3">
         <label for="seguranca1">Segurança 1</label>
@@ -73,10 +66,6 @@
     <div class="form-group mb-3">
         <label for="seguranca3">Segurança 3</label>
         <input [(ngModel)]="carro.seguranca3" type="text" class="form-control" id="seguranca3" >
-    </div>
-    <div class="form-group mb-3">
-        <label for="cavalos">Cavalos</label>
-        <input [(ngModel)]="carro.cavalos" type="text" class="form-control" id="cavalos" >
     </div>
     <div class="form-group mb-3">
         <label for="performance">Performance</label>

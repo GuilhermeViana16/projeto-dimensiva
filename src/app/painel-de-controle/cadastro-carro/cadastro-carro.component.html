@@ -8,11 +8,19 @@
                 <div class="dashborad-box">
                     <div class="section-body">
 
-                          <form class="needs-validation" novalidate [formGroup]= "form" (ngSubmit)="onSubmit()" (ngSubmit)="onSubmit1()">
+                          <form class="needs-validation" novalidate 
+                          [formGroup]= "form" 
+                          (ngSubmit)="onSubmit()" 
+                          (ngSubmit)="onSubmit1()" 
+                          (ngSubmit)="onSubmit2()" 
+                          (ngSubmit)="onSubmit3()" 
+                          (ngSubmit)="onSubmit4()" 
+                          (ngSubmit)="onSubmit5()" 
+                          (ngSubmit)="onSubmit6()" >
 
                             <!-- {{ form.valid }}
-                            {{ form.value | json }}
-                       -->
+                            {{ form.value | json }} -->
+                      
                             <div class="group-gap">
                       
                                 <div class="avatar-upload">
@@ -135,12 +143,6 @@
                                 <input type="text" Class="form-control mb-3" id="nome" placeholder="Nome do Carro"
                                     formControlName = "nome"/>
                             </div>
-                      
-                            Detalhe:
-                            <div>
-                                <input type="text" class="form-control mb-3" id="detalhe" placeholder="Detalhe do Carro"
-                                    formControlName = "detalhe"/>
-                            </div>
 
                             Cavalos:
                             <div>
@@ -203,7 +205,7 @@
                             
                             Autor:
                             <select class="custom-select mb-3" id="autor" formControlName="autor">
-                              <option *ngFor="let autor of autores" value="{{autor.id}}">{{autor.nome}}</option>
+                              <option *ngFor="let autor of autores" value="{{autor.nome}}">{{autor.nome}}</option>
                             </select>
                       
                             Data:

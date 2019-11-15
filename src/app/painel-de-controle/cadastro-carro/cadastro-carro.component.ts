@@ -62,12 +62,9 @@ export class CadastroCarroComponent implements OnInit {
       nome:
       [null,
         [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
-      detalhe:
-      [null,
-        [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
       cavalos:
       [null,
-        [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+        [Validators.required, Validators.minLength(2), Validators.maxLength(250)]],
       performance:
       [null,
         [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
@@ -147,7 +144,7 @@ export class CadastroCarroComponent implements OnInit {
   cadastrar(){
     this.cadastroCarroService.cadastro(this.form.value)
       .subscribe(res => this.carro.push(res));
-    console.log('Carro Cadastrada!')
+    console.log('Carro Cadastrado!')
     this.alert.show();
     this.onCancel();
     this.removeUploadedFile();

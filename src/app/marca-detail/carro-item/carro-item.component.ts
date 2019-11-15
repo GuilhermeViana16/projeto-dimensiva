@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 import { CarroItem } from './carro-item.model';
-import { Marca } from 'src/app/marcas/marca/marca.model';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 
 @Component({
