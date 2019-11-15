@@ -10,9 +10,9 @@
 
                           <form class="needs-validation" novalidate [formGroup]= "form" (ngSubmit)="onSubmit()" (ngSubmit)="onSubmit1()">
 
-                            {{ form.valid }}
+                            <!-- {{ form.valid }}
                             {{ form.value | json }}
-                      
+                       -->
                             <div class="group-gap">
                       
                                 <div class="avatar-upload">
@@ -38,7 +38,7 @@
                             <!-- IMAGENS INTERNAS -->
 
                             <!-- IMAGEM 1 -->
-                            <div class="group-gap1 mb-3 bg-primary float-left">
+                            <div class="group-gap1 mb-3 float-left">
                       
                                 <div class="avatar-upload1">
                                     <div class="avatar-edit1">
@@ -53,7 +53,7 @@
                             </div>
                             <!-- ------------------- -->
                             <!-- IMAGEM 2 -->
-                            <div class="group-gap2 mb-3 bg-warning float-left">
+                            <div class="group-gap2 mb-3 float-left">
                       
                                 <div class="avatar-upload2">
                                     <div class="avatar-edit2">
@@ -68,7 +68,7 @@
                             </div>
                             <!-- -------------------- -->
                             <!-- IMAGEM 3 -->
-                            <div class="group-gap3 mb-3 bg-warning float-left">
+                            <div class="group-gap3 mb-3 float-left">
 
                                 <div class="avatar-upload3">
                                     <div class="avatar-edit3">
@@ -85,7 +85,51 @@
 
                             <h2 class="mb-3 text-center">IMAGENS EXTERNAS DO CARRO</h2>
                             <!-- IMAGENS EXTERNAS -->
+                            <!-- IMAGEM 4 -->
+                            <div class="group-gap4 mb-3 float-left">
 
+                                <div class="avatar-upload4">
+                                    <div class="avatar-edit4">
+                                        <input type='file' id="imageUpload4" accept=".png, .jpg, .jpeg" #fileInput4 (change)="uploadFile4($event)"/>
+                                    </div>
+                                    <div class="avatar-preview4">
+                                        <div id="imagePreview4" [style.backgroundImage]="'url('+ imageUrl4 +')'"></div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-danger btn-lg btn-block" (click)="fileInput4.click()">EXTERNO 1</button>    
+                        
+                            </div>
+                            <!-- -------------------- -->
+                            <!-- IMAGEM 5 -->
+                            <div class="group-gap5 mb-3 float-left">
+
+                                <div class="avatar-upload5">
+                                    <div class="avatar-edit5">
+                                        <input type='file' id="imageUpload5" accept=".png, .jpg, .jpeg" #fileInput5 (change)="uploadFile5($event)"/>
+                                    </div>
+                                    <div class="avatar-preview5">
+                                        <div id="imagePreview5" [style.backgroundImage]="'url('+ imageUrl5 +')'"></div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-danger btn-lg btn-block" (click)="fileInput5.click()">EXTERNO 2</button>    
+                        
+                            </div>
+                            <!-- -------------------- -->
+                            <!-- IMAGEM 6 -->
+                            <div class="group-gap6 mb-3 float-left">
+
+                                <div class="avatar-upload6">
+                                    <div class="avatar-edit6">
+                                        <input type='file' id="imageUpload6" accept=".png, .jpg, .jpeg" #fileInput6 (change)="uploadFile6($event)"/>
+                                    </div>
+                                    <div class="avatar-preview6">
+                                        <div id="imagePreview6" [style.backgroundImage]="'url('+ imageUrl6 +')'"></div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-danger btn-lg btn-block" (click)="fileInput6.click()">EXTERNO 3</button>    
+                        
+                            </div>
+                            <!-- -------------------- -->
                             Nome:
                             <div>
                                 <input type="text" Class="form-control mb-3" id="nome" placeholder="Nome do Carro"

@@ -17,6 +17,9 @@ export class CadastroCarroComponent implements OnInit {
   submitted1 = false;
   submitted2 = false;
   submitted3 = false;
+  submitted4 = false;
+  submitted5 = false;
+  submitted6 = false;
   carro: CarroItem[] = [];
   @ViewChild('deleteSwal') alert: SwalComponent;
 
@@ -79,6 +82,15 @@ export class CadastroCarroComponent implements OnInit {
       imagem_interior_3:
       [null,
         [Validators.required, Validators.minLength(3), Validators.maxLength(999)]],
+      imagem_exterior_1:
+      [null,
+        [Validators.required, Validators.minLength(3), Validators.maxLength(999)]],
+      imagem_exterior_2:
+      [null,
+        [Validators.required, Validators.minLength(3), Validators.maxLength(999)]],
+      imagem_exterior_3:
+      [null,
+        [Validators.required, Validators.minLength(3), Validators.maxLength(999)]],
       marcaId: 
       [null,
       [Validators.required, Validators.minLength(1), Validators.maxLength(250)]],
@@ -96,12 +108,18 @@ export class CadastroCarroComponent implements OnInit {
     this.submitted1 = false;
     this.submitted2 = false;
     this.submitted3 = false;
+    this.submitted4 = false;
+    this.submitted5 = false;
+    this.submitted6 = false;
     this.form.reset();
     this.registrationForm.reset();
     this.removeUploadedFile();
     this.removeUploadedFile1();
     this.removeUploadedFile2();
     this.removeUploadedFile3();
+    this.removeUploadedFile4();
+    this.removeUploadedFile5();
+    this.removeUploadedFile6();
   }
 
   cadastrar(){
@@ -114,6 +132,9 @@ export class CadastroCarroComponent implements OnInit {
     this.removeUploadedFile1();
     this.removeUploadedFile2();
     this.removeUploadedFile3();
+    this.removeUploadedFile4();
+    this.removeUploadedFile5();
+    this.removeUploadedFile6();
   }
 
 
@@ -326,6 +347,162 @@ export class CadastroCarroComponent implements OnInit {
   // Registro de acesso ao formulario
   onSubmit3() {
     this.submitted3 = true;
+      console.log(this.form.value)
+  }
+
+  /*_____________________________________________________________________*/
+  /*___________________________CARREGAR IMAGEM EXTERNA 1__________________________*/
+
+
+  /*##################### Registro no Formulario #####################*/
+  registrationForm4 = this.fb.group({
+    imagem_interior_2: [null]
+  })
+
+  /*########################## Upload da imagem ########################*/
+  @ViewChild('fileInput4') el4: ElementRef;
+  imageUrl4: any = 'https://i.pinimg.com/236x/d6/27/d9/d627d9cda385317de4812a4f7bd922e9--man--iron-man.jpg';
+  editFile4: boolean = true;
+  removeUpload4: boolean = false;
+
+  uploadFile4(event) {
+    let reader4 = new FileReader(); // HTML5 FileReader API
+    let imagem_exterior_1 = event.target.files[0];
+    if (event.target.files && event.target.files[0]) {
+      reader4.readAsDataURL(imagem_exterior_1);
+
+      // Carregamento das imagens
+      reader4.onload = () => {
+        this.imageUrl4 = reader4.result;
+        this.form.patchValue({
+          imagem_exterior_1: reader4.result
+        });
+        this.editFile4 = false;
+        this.removeUpload4 = true;
+      }
+      // Detector de mudancas de imagens
+      this.cd.markForCheck();
+    }
+  }
+
+  // Funcao para remover o upload da imagem
+  removeUploadedFile4() {
+    let newFileList4 = Array.from(this.el.nativeElement.files);
+    this.imageUrl4 = 'https://i.pinimg.com/236x/d6/27/d9/d627d9cda385317de4812a4f7bd922e9--man--iron-man.jpg';
+    this.editFile4 = true;
+    this.removeUpload4 = false;
+    this.form.patchValue({
+      imagem_exterior_1: [null]
+    });
+  }
+
+  // Registro de acesso ao formulario
+  onSubmit4() {
+    this.submitted4 = true;
+      console.log(this.form.value)
+  }
+
+  /*_____________________________________________________________________*/
+  /*___________________________CARREGAR IMAGEM EXTERNA 2__________________________*/
+
+
+  /*##################### Registro no Formulario #####################*/
+  registrationForm5 = this.fb.group({
+    imagem_interior_2: [null]
+  })
+
+  /*########################## Upload da imagem ########################*/
+  @ViewChild('fileInput5') el5: ElementRef;
+  imageUrl5: any = 'https://i.pinimg.com/236x/d6/27/d9/d627d9cda385317de4812a4f7bd922e9--man--iron-man.jpg';
+  editFile5: boolean = true;
+  removeUpload5: boolean = false;
+
+  uploadFile5(event) {
+    let reader5 = new FileReader(); // HTML5 FileReader API
+    let imagem_exterior_2 = event.target.files[0];
+    if (event.target.files && event.target.files[0]) {
+      reader5.readAsDataURL(imagem_exterior_2);
+
+      // Carregamento das imagens
+      reader5.onload = () => {
+        this.imageUrl5 = reader5.result;
+        this.form.patchValue({
+          imagem_exterior_2: reader5.result
+        });
+        this.editFile5 = false;
+        this.removeUpload5 = true;
+      }
+      // Detector de mudancas de imagens
+      this.cd.markForCheck();
+    }
+  }
+
+  // Funcao para remover o upload da imagem
+  removeUploadedFile5() {
+    let newFileList5 = Array.from(this.el.nativeElement.files);
+    this.imageUrl5 = 'https://i.pinimg.com/236x/d6/27/d9/d627d9cda385317de4812a4f7bd922e9--man--iron-man.jpg';
+    this.editFile5 = true;
+    this.removeUpload5 = false;
+    this.form.patchValue({
+      imagem_exterior_2: [null]
+    });
+  }
+
+  // Registro de acesso ao formulario
+  onSubmit5() {
+    this.submitted5 = true;
+      console.log(this.form.value)
+  }
+
+  /*_____________________________________________________________________*/
+  /*___________________________CARREGAR IMAGEM EXTERNA 3__________________________*/
+
+
+  /*##################### Registro no Formulario #####################*/
+  registrationForm6 = this.fb.group({
+    imagem_interior_2: [null]
+  })
+
+  /*########################## Upload da imagem ########################*/
+  @ViewChild('fileInput6') el6: ElementRef;
+  imageUrl6: any = 'https://i.pinimg.com/236x/d6/27/d9/d627d9cda385317de4812a4f7bd922e9--man--iron-man.jpg';
+  editFile6: boolean = true;
+  removeUpload6: boolean = false;
+
+  uploadFile6(event) {
+    let reader6 = new FileReader(); // HTML5 FileReader API
+    let imagem_exterior_3 = event.target.files[0];
+    if (event.target.files && event.target.files[0]) {
+      reader6.readAsDataURL(imagem_exterior_3);
+
+      // Carregamento das imagens
+      reader6.onload = () => {
+        this.imageUrl6 = reader6.result;
+        this.form.patchValue({
+          imagem_exterior_3: reader6.result
+        });
+        this.editFile6 = false;
+        this.removeUpload6 = true;
+      }
+      // Detector de mudancas de imagens
+      this.cd.markForCheck();
+    }
+  }
+
+  // Funcao para remover o upload da imagem
+  removeUploadedFile6() {
+    let newFileList6 = Array.from(this.el.nativeElement.files);
+    this.imageUrl6 = 'https://i.pinimg.com/236x/d6/27/d9/d627d9cda385317de4812a4f7bd922e9--man--iron-man.jpg';
+    this.editFile6 = true;
+    this.removeUpload6 = false;
+    this.form.patchValue({
+      imagem_exterior_3: [null]
+    });
+  }
+
+  // Registro de acesso ao formulario
+  onSubmit6() {
+    this.submitted6 = true;
       console.log(this.form.value)
   }
 
