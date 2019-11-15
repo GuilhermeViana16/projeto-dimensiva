@@ -198,7 +198,7 @@
 
                             Marca:
                             <select class="custom-select mb-3" id="marcaId" formControlName="marcaId">
-                                <option value="HUTRCla">Volkswagen</option>
+                                <option *ngFor="let marca of marcas" value="{{marca.id}}">{{marca.nome}}</option>
                             </select>
                             
                             Autor:

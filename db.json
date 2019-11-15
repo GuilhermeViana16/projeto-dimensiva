@@ -82,5 +82,11 @@
       "link": "https://www.codisman.com.br/assets/uploads/nt_veiculos_seguranca/58758-Seguran--a.png?v=0.1",
       "imagem": "../assets/carros/volkswagen-gol.jpg"
     }
+  ],
+  "autor": [
+    {
+      "id": "1",
+      "nome": "Guilherme"
+    }
   ]
 }

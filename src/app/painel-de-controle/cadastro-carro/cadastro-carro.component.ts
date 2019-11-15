@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { CadastroCarroService } from './cadastro-carro.service';
 import { CarroItem } from 'src/app/marca-detail/carro-item/carro-item.model';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
+import { Marca } from 'src/app/marcas/marca/marca.model';
 
 @Component({
   selector: 'app-cadastro-carro',
@@ -20,6 +21,7 @@ export class CadastroCarroComponent implements OnInit {
   submitted4 = false;
   submitted5 = false;
   submitted6 = false;
+  marcas: Marca[];
   carro: CarroItem[] = [];
   @ViewChild('deleteSwal') alert: SwalComponent;
 
@@ -29,7 +31,16 @@ export class CadastroCarroComponent implements OnInit {
     private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
+    this.obterMarcas();
     this.validation();
+  }
+
+  obterMarcas(){
+    this.cadastroCarroService.obterFkProdutos()
+    .subscribe(res => {
+      this.marcas = res;
+      console.log(this.marcas)
+    })
   }
 
   validation(){
