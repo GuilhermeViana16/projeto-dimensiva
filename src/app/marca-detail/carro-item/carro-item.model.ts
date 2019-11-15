@@ -4,5 +4,5 @@ export interface CarroItem {
     imagem: string
     marca: string
     autor: string
-    data: Date
+    data: string
 }

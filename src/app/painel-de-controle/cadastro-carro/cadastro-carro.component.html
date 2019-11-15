@@ -26,11 +26,19 @@
                                 <button type="submit" class="btn btn-danger btn-lg btn-block mb-3" (click)="fileInput.click()">ESCOLHER IMAGEM DO CARRO</button>
                       
                             </div>
+
+                            Link:
+                            <div>
+                                <input type="text" Class="form-control mb-3" id="link" placeholder="Link da Imagem"
+                                    formControlName = "link"/>
+                            </div>
                       
                             
                             <h2 class="mb-3 text-center">IMAGENS INTERNAS DO CARRO</h2>
                             <!-- IMAGENS INTERNAS -->
-                            <div class="group-gap1">
+
+                            <!-- IMAGEM 1 -->
+                            <div class="group-gap1 mb-3 bg-primary float-left">
                       
                                 <div class="avatar-upload1">
                                     <div class="avatar-edit1">
@@ -43,30 +51,70 @@
                                 <button type="submit" class="btn btn-danger btn-lg btn-block" (click)="fileInput1.click()">INTERNO 1</button>    
                         
                             </div>
+                            <!-- ------------------- -->
+                            <!-- IMAGEM 2 -->
+                            <div class="group-gap2 mb-3 bg-warning float-left">
+                      
+                                <div class="avatar-upload2">
+                                    <div class="avatar-edit2">
+                                        <input type='file' id="imageUpload2" accept=".png, .jpg, .jpeg" #fileInput2 (change)="uploadFile2($event)"/>
+                                    </div>
+                                    <div class="avatar-preview2">
+                                        <div id="imagePreview2" [style.backgroundImage]="'url('+ imageUrl2 +')'"></div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-danger btn-lg btn-block" (click)="fileInput2.click()">INTERNO 2</button>    
+                        
+                            </div>
+                            <!-- -------------------- -->
+                            <!-- IMAGEM 3 -->
+                            <div class="group-gap3 mb-3 bg-warning float-left">
 
-                          
-                                <!-- ------------------- -->
+                                <div class="avatar-upload3">
+                                    <div class="avatar-edit3">
+                                        <input type='file' id="imageUpload3" accept=".png, .jpg, .jpeg" #fileInput3 (change)="uploadFile3($event)"/>
+                                    </div>
+                                    <div class="avatar-preview3">
+                                        <div id="imagePreview3" [style.backgroundImage]="'url('+ imageUrl3 +')'"></div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-danger btn-lg btn-block" (click)="fileInput3.click()">INTERNO 3</button>    
+                        
+                            </div>
+                            <!-- -------------------- -->
 
+                            <h2 class="mb-3 text-center">IMAGENS EXTERNAS DO CARRO</h2>
+                            <!-- IMAGENS EXTERNAS -->
+
+                            Nome:
                             <div>
-                                <input type="text" Class="form-control mt-3 mb-3" id="nome" placeholder="Nome da Marca"
+                                <input type="text" Class="form-control mb-3" id="nome" placeholder="Nome do Carro"
                                     formControlName = "nome"/>
                             </div>
                       
+                            Detalhe:
                             <div>
-                                <input type="text" class="form-control mt-3 mb-3" id="detalhe" placeholder="Detalhe da Marca"
+                                <input type="text" class="form-control mb-3" id="detalhe" placeholder="Detalhe do Carro"
                                     formControlName = "detalhe"/>
                             </div>
 
+                            Sobre:
                             <div>
-                                <textarea class="form-control mb-3" rows="5" id="sobre" placeholder="Descrição da Marca"
+                                <textarea class="form-control mb-3" rows="5" id="sobre" placeholder="Descrição do Carro"
                                     formControlName = "sobre"></textarea>
                             </div>
-                      
+
+                            Marca:
+                            <select class="custom-select mb-3" id="marca" formControlName="marca">
+                                <option value="HUTRCla">Volkswagen</option>
+                            </select>
+                            
+                            Autor:
                             <select class="custom-select mb-3" id="autor" formControlName="autor">
-                              <option selected>Autor</option>
                               <option value="Guilherme">Guilherme</option>
                             </select>
                       
+                            Data:
                             <div>
                                 <input class="form-control mb-3" type="date" value="0000-00-00" id="data" formControlName="data">
                             </div>
