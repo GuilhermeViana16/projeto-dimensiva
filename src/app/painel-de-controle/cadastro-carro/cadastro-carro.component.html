@@ -203,7 +203,7 @@
                             
                             Autor:
                             <select class="custom-select mb-3" id="autor" formControlName="autor">
-                              <option value="Guilherme">Guilherme</option>
+                              <option *ngFor="let autor of autores" value="{{autor.id}}">{{autor.nome}}</option>
                             </select>
                       
                             Data:

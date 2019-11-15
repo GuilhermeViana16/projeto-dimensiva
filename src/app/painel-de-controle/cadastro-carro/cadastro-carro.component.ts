@@ -5,6 +5,7 @@ import { CadastroCarroService } from './cadastro-carro.service';
 import { CarroItem } from 'src/app/marca-detail/carro-item/carro-item.model';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { Marca } from 'src/app/marcas/marca/marca.model';
+import { Autor } from './autor.model';
 
 @Component({
   selector: 'app-cadastro-carro',
@@ -21,6 +22,7 @@ export class CadastroCarroComponent implements OnInit {
   submitted4 = false;
   submitted5 = false;
   submitted6 = false;
+  autores: Autor[];
   marcas: Marca[];
   carro: CarroItem[] = [];
   @ViewChild('deleteSwal') alert: SwalComponent;
@@ -31,15 +33,24 @@ export class CadastroCarroComponent implements OnInit {
     private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
+    this.obterAutores();
     this.obterMarcas();
     this.validation();
   }
 
   obterMarcas(){
-    this.cadastroCarroService.obterFkProdutos()
+    this.cadastroCarroService.obterFkCarros()
     .subscribe(res => {
       this.marcas = res;
       console.log(this.marcas)
+    })
+  }
+
+  obterAutores(){
+    this.cadastroCarroService.obterAutores()
+    .subscribe(res => {
+      this.autores = res;
+      console.log(this.autores)
     })
   }
 
