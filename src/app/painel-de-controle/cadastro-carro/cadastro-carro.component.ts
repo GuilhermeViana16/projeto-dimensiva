@@ -40,7 +40,31 @@ export class CadastroCarroComponent implements OnInit {
       detalhe:
       [null,
         [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
-      sobre:
+      cavalos:
+      [null,
+        [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+      performance:
+      [null,
+        [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+      seguranca1:
+      [null,
+        [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+      seguranca2:
+      [null,
+        [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+      seguranca3:
+      [null,
+        [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+      direcao:
+      [null,
+        [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+      freios:
+      [null,
+        [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+      transmissao:
+      [null,
+        [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
+      motorizacao:
       [null,
         [Validators.required, Validators.minLength(3), Validators.maxLength(250)]],
       imagem:
