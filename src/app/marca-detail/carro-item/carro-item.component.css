@@ -1,53 +1,214 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
-@import url(https://fonts.googleapis.com/css?family=Rubik:400,900);
+/* MODAL ACCORDION */
 
-body {
-   background: linear-gradient(#f6f7fc 0%, #d5e1e8 40%);
-   transform-style: preserve-3d;
-   transform: perspective(800px);
-   font-family: 'Lato', sans-serif;
+
+
+
+a:focus,
+a:hover,
+a:active {
+  outline: 0;
+  text-decoration: none;
 }
 
-#card-container{
-   width: 700px;
-   height: 350px;
-   position:absolute;
-}
-#card{
-   animation: backAn 60s infinite;
-   color:#fff;
-   padding:30px;
-   width:100%;
-   height:100%;
-   position:absolute;
-   z-index:1;
-   background:url(http://riccardotartaglia.it/img/deadpool/back.jpg) 100% bottom;
-   box-shadow: 
-     0px 45px 100px rgba(0, 0, 0, .4),
-     inset 0 0 0 1000px rgba(27, 87, 156, 0.6);
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: -0.1rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
 }
 
-#card .text-block{position:relative;z-index:2;text-shadow: 0px 3px 10px rgba(0, 0, 0, .7)}
-#card .text-block h1{font-family: 'Rubik', sans-serif; font-size:3em; margin:0; text-transform:uppercase; font-weight:700;}
-#card .text-block h1 small{font-size:.4em;color:#ccc;position:relative;bottom:10px}
-#card .text-block h3{margin:0;font-weight:700;}
-#card .text-block p{font-weight:300; width:60%}
-#card .text-block button{transition: all .35s cubic-bezier(.37,.26,.35,1);border:4px solid #fff; padding:10px; background:transparent;font-family: 'Rubik', sans-serif;text-transform:uppercase; font-weight:700; cursor:pointer;}
-#card .text-block button:hover{background:rgb(0, 88, 252)}
-
-#card-container .pg{position:absolute;height:450px; width:40%; right:-10px;bottom:0px;z-index:2}
-#card-container .pg > img{height:450px;}
-
-.shine {
-position: absolute;
-top: 0; left: 0; right: 0; bottom: 0;
-background: linear-gradient(90deg, rgba(0,0,0,.4) 0%,rgba(0,0,0,.2) 60%);
-z-index: 1;
+.panel {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #fff;
+  background: none;
+  box-shadow: none;
+  margin: 0;
 }
-button{color:#fff;}
 
-@keyframes backAn {
-  0%   { background-size:100% }
-  50%   { background-size:250% }
-  100%   { background-size:100% }
+.panel:last-child {
+  border-bottom: none;
+}
+
+.panel-group > .panel:first-child .panel-heading {
+  border-radius: 4px 4px 0 0;
+}
+
+.panel-group .panel {
+  border-radius: 0;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+
+.panel-heading {
+  background-color: #20638f;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+  padding: 0;
+}
+
+.panel-title a {
+  display: block;
+  color: #fff;
+  padding: 15px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: initial;
+}
+
+.panel-body {
+  background: #fff;
+}
+
+.panel:last-child .panel-body {
+  border-radius: 0 0 4px 4px;
+}
+
+.panel:last-child .panel-heading {
+  border-radius: 0 0 4px 4px;
+  transition: border-radius 0.3s linear 0.2s;
+}
+
+.panel:last-child .panel-heading.active {
+  border-radius: 0;
+  transition: border-radius linear 0s;
+}
+/* #bs-collapse icon scale option */
+
+.panel-heading a:before {
+  content: '\e146';
+  position: absolute;
+  font-family: 'Material Icons';
+  right: 5px;
+  top: 10px;
+  font-size: 24px;
+  transition: all 0.5s;
+  transform: scale(1);
+}
+
+.panel-heading.active a:before {
+  content: ' ';
+  transition: all 0.5s;
+  transform: scale(0);
+}
+
+#bs-collapse .panel-heading a:after {
+  content: ' ';
+  font-size: 24px;
+  position: absolute;
+  font-family: 'Material Icons';
+  right: 5px;
+  top: 10px;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+
+#bs-collapse .panel-heading.active a:after {
+  content: '\e909';
+  transform: scale(1);
+  transition: all 0.5s;
+}
+/* #accordion rotate icon option */
+
+#accordion .panel-heading a:before {
+  content: '\e316';
+  font-size: 24px;
+  position: absolute;
+  font-family: 'Material Icons';
+  right: 5px;
+  top: 10px;
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+#accordion .panel-heading.active a:before {
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
+.panel-group .panel .panel-collapse .panel-body .conteudo {
+  font-family: initial;
+}
+
+/* 
+--------------------------------------------------------------
+MODAL
+--------------------------------------------------------------
+*/
+
+.text-uppercase {
+  text-transform:uppercase;
+}
+
+.titulos {
+  font-family: fantasy;
+  font-weight:bold;
+  font-size: 2.0em;
+  color: #333 !important;
+}
+
+.i {
+  font-style: italic !important;
+}
+
+.slide_interior p, .slide_exterior p{
+  background: #20638f;
+  color: white;
+  display: block;
+  margin: 10px auto 0 auto;
+  padding: 12px 15px;
+  font-weight: bold;
+  outline: none !important;
+  -webkit-transform: skew(-12deg);
+  -moz-transform: skew(-12deg);
+  -o-transform: skew(-12deg);
+  transform: skew(-12deg);
+}
+
+.seguranca h1, .informacoes h1, .performance .direita h2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.seguranca p {
+  margin-left: 20px;
+  font-family: none;
+  color: #333;
+  font-size: 1.0em;
+  font-weight:bold;
+}
+
+.fa-check {
+  color: #059e2b;
+}
+
+.performance .text-center h2{
+  font-size: 100px;
+  color: #20638f;
+  line-height: .8;
+  font-weight: 700;
+}
+
+.performance .text-center p{
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 700;
+  color: #333;
+  font-weight:bold;
+  font-family: fantasy;
+  margin-top: 3px;
+}
+
+.performance .sobre p{
+  font-family: initial;
+  color: #333;
+  font-size: 1.0em;
+  font-weight:bold;
+  margin: 10px 10px 10px 25px;
+  text-align: justify;
 }
