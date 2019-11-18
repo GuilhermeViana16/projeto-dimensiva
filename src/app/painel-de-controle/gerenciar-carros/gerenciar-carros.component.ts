@@ -44,13 +44,18 @@ export class GerenciarCarrosComponent implements OnInit {
       this.alert.show()
   }
 
+  confirm(carro: CarroItem){
+    this.carro = carro;
+    this.alert2.show()
+    console.log(this.carro)
+  }
+
   remover(carro: CarroItem){
     this.carro = carro;
     this.data
       .remover(this.carro)
       .subscribe(res => this.carros.push(res));
       this.listar()
-      this.alert2.show()
   }
 
   fecharModal(){
@@ -58,4 +63,4 @@ export class GerenciarCarrosComponent implements OnInit {
     this.listar()
   }
 
-}
+} 

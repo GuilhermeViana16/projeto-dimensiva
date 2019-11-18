@@ -45,13 +45,18 @@ export class GerenciarMarcasComponent implements OnInit {
       this.alert.show()
   }
 
+  confirm(marca: Marca){
+    this.marca = marca;
+    this.alert2.show()
+    console.log(this.marca)
+  }
+
   remover(marca: Marca){
     this.marca = marca;
     this.data
       .remover(this.marca)
       .subscribe(res => this.marcas.push(res));
       this.listar()
-      this.alert2.show()
   }
 
   fecharModal(){

@@ -26,7 +26,7 @@
                                         <td>{{marca.data}}</td>
                                         <td>
                                             <a (click)="onEdit(marca, modalMarca)"><span style="color: dodgerblue; cursor: pointer;" class="g-action fa fa-pencil"></span></a>
-                                            <a data-toggle="modal" data-target="#myModal" (click)="remover(marca)"><span style="color: dodgerblue; cursor: pointer;" class="g-action fa fa-trash"></span></a>
+                                            <a (click)="confirm(marca)" data-toggle="modal" data-target="#myModal"><span style="color: dodgerblue; cursor: pointer;" class="g-action fa fa-trash"></span></a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -83,17 +83,20 @@
   </ng-template>
 
 <swal
-#upgradeSwal
-title="Sucesso"
-text="Marca atualizada com sucesso!"
-type="success"
-(confirm)="fecharModal()">
+#deleteSwal2
+title = "Deseja realmente excluir essa marca?"
+type = "warning"
+showCancelButton = "true"
+(confirm) = "remover(marca)"
+(confirm) = "listar()"
+>
 </swal>
 
 <swal
-#deleteSwal2
-title="Sucesso"
-text="Marca removida com sucesso!"
-type="success"
-(confirm)="listar()">
+#upgradeSwal
+title = "Sucesso"
+text = "Marca atualizada com sucesso!"
+type = "success"
+(confirm) = "fecharModal()"
+>
 </swal>

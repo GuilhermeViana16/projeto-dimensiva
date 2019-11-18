@@ -25,7 +25,7 @@
                                         <td>{{carro.data}}</td>
                                         <td>
                                             <a (click)="onEdit(carro, modalCarro)"><span style="color: dodgerblue; cursor: pointer;" class="g-action fa fa-pencil"> </span></a>
-                                            <a data-toggle="modal" data-target="#myModal" (click)="remover(carro)"><span style="color: dodgerblue; cursor: pointer;" class="g-action fa fa-trash"></span></a>
+                                            <a (click)="confirm(carro)" data-toggle="modal" data-target="#myModal" (click)="remover(carro)"><span style="color: dodgerblue; cursor: pointer;" class="g-action fa fa-trash"></span></a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -124,17 +124,20 @@
 </ng-template>
 
 <swal
-#upgradeSwal
-title="Sucesso"
-text="Carro atualizado com sucesso!"
-type="success"
-(confirm)="fecharModal()">
+#deleteSwal2
+title = "Deseja realmente excluir esse carro?"
+type = "warning"
+showCancelButton = "true"
+(confirm) = "remover(carro)"
+(confirm) = "listar()"
+>
 </swal>
 
 <swal
-#deleteSwal2
-title="Sucesso"
-text="Carro removido com sucesso!"
-type="success"
-(confirm)="listar()">
+#upgradeSwal
+title = "Sucesso"
+text = "Carro atualizado com sucesso!"
+type = "success"
+(confirm) = "fecharModal()"
+>
 </swal>
